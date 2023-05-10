@@ -1,13 +1,13 @@
 if [ ! -d "./logs" ]; then
-    mkdir ./logs
+  mkdir ./logs
 fi
 
 if [ ! -d "./logs/LongForecasting" ]; then
-    mkdir ./logs/LongForecasting
+  mkdir ./logs/LongForecasting
 fi
 
 if [ ! -d "./logs/LongForecasting/univariate" ]; then
-    mkdir ./logs/LongForecasting/univariate
+  mkdir ./logs/LongForecasting/univariate
 fi
 model_name=DLinear
 
@@ -24,7 +24,7 @@ python -u run_longExp.py \
   --enc_in 1 \
   --des 'Exp' \
   --itr 1 --batch_size 32 --feature S --learning_rate 0.005 >logs/LongForecasting/$model_name'_'fS_ETTh1_336_24.log
- 
+
 python -u run_longExp.py \
   --is_training 1 \
   --root_path ./dataset/ \
@@ -77,7 +77,6 @@ python -u run_longExp.py \
   --des 'Exp' \
   --itr 1 --batch_size 32 --feature S --learning_rate 0.005 >logs/LongForecasting/$model_name'_'fS_ETTh1_336_336.log
 
-
 python -u run_longExp.py \
   --is_training 1 \
   --root_path ./dataset/ \
@@ -90,4 +89,3 @@ python -u run_longExp.py \
   --enc_in 1 \
   --des 'Exp' \
   --itr 1 --batch_size 32 --feature S --learning_rate 0.005 >logs/LongForecasting/$model_name'_'fS_ETTh1_336_720.log
-

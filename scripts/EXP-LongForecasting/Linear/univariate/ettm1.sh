@@ -1,13 +1,13 @@
 if [ ! -d "./logs" ]; then
-    mkdir ./logs
+  mkdir ./logs
 fi
 
 if [ ! -d "./logs/LongForecasting" ]; then
-    mkdir ./logs/LongForecasting
+  mkdir ./logs/LongForecasting
 fi
 
 if [ ! -d "./logs/LongForecasting/univariate" ]; then
-    mkdir ./logs/LongForecasting/univariate
+  mkdir ./logs/LongForecasting/univariate
 fi
 model_name=DLinear
 

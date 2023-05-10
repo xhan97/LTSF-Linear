@@ -1,10 +1,9 @@
-
 if [ ! -d "./logs" ]; then
-    mkdir ./logs
+  mkdir ./logs
 fi
 
 if [ ! -d "./logs/LongForecasting" ]; then
-    mkdir ./logs/LongForecasting
+  mkdir ./logs/LongForecasting
 fi
 seq_len=336
 model_name=DLinear
